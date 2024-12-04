@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashol Tech Division</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#0A0A0A",
+              accent: "#2B8C1A",
+              surface: "#141414",
+              "surface-light": "#1A1A1A",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-dark text-white font-['Space_Grotesk']">
+    <!-- Matrix-like background -->
+    <div class="matrix-bg fixed inset-0 opacity-10"></div>
+
+    <!-- Modern Texture Overlay -->
+    <div class="tech-texture fixed inset-0 pointer-events-none"></div>
+    <div class="cyber-dots fixed inset-0 pointer-events-none"></div>
+
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/5"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative group">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-accent to-accent/50 rounded blur opacity-25 group-hover:opacity-75 transition duration-200"
+              ></div>
+              <img src="fashol.svg" alt="Fashol" class="h-8 relative" />
+            </div>
+            <div class="flex items-center gap-2 text-xl font-bold">
+              <span class="text-accent font-mono">/</span>
+              <span class="relative">
+                Tech Division
+                <span
+                  class="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-accent to-transparent"
+                ></span>
+              </span>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#stack" class="nav-link">.stack()</a>
+            <a href="#technologies" class="nav-link">.technologies()</a>
+            <a href="#team" class="nav-link">.team()</a>
+            <div class="h-4 w-px bg-white/20"></div>
+            <a href="#contact" class="relative group">
+              <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-accent to-accent/50 opacity-50 group-hover:opacity-100 blur transition duration-200 rounded"
+              ></div>
+              <span class="relative px-4 py-2 bg-surface block rounded">
+                Contact →
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Updated Hero Section -->
+    <header
+      class="min-h-screen relative flex items-center pt-20 overflow-hidden"
+    >
+      <!-- Tech Grid Background -->
+      <div class="absolute inset-0">
+        <div class="tech-grid"></div>
+        <div class="tech-glow"></div>
+        <div class="data-streams"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="space-y-8">
+            <div class="terminal-badge" data-aos="fade-down">
+              <div class="terminal-badge-inner">
+                <span class="terminal-prompt">$</span>
+                <span class="typing-text">cd /tech-division</span>
+                <span class="cursor"></span>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <h1
+                class="text-5xl md:text-7xl font-bold leading-tight glitch-text"
+                data-aos="fade-right"
+              >
+                System
+                <span class="text-accent glitch-text" data-text="Architecture"
+                  >Architecture</span
+                >
+                <span class="block mt-2 text-2xl text-white/60 font-mono"
+                  >.build()</span
+                >
+              </h1>
+
+              <div class="code-snippet" data-aos="fade-up">
+                <pre><code>const techStack = {
+  frontend: ["React", "Vue"],
+  backend: ["Laravel", "Spring"],
+  devops: ["Docker", "K8s"],
+  status: "operational"
+};</code></pre>
+              </div>
+            </div>
+
+            <!-- System Status -->
+            <div class="system-metrics" data-aos="fade-up">
+              <div class="metric">
+                <div class="metric-header">
+                  <span class="metric-label">System Health</span>
+                  <span class="metric-value">99.9%</span>
+                </div>
+                <div class="metric-bar">
+                  <div class="metric-progress" style="width: 99.9%"></div>
+                </div>
+              </div>
+
+              <div class="metric">
+                <div class="metric-header">
+                  <span class="metric-label">Services Online</span>
+                  <span class="metric-value">50/50</span>
+                </div>
+                <div class="metric-bar">
+                  <div class="metric-progress" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <div class="metric">
+                <div class="metric-header">
+                  <span class="metric-label">Load Average</span>
+                  <span class="metric-value">0.75</span>
+                </div>
+                <div class="metric-bar">
+                  <div class="metric-progress" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content - Live Terminal -->
+          <div class="relative hidden md:block" data-aos="fade-left">
+            <div class="live-terminal">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="terminal-title">system_monitor.sh</div>
+              </div>
+              <div class="terminal-body" id="liveTerminal">
+                <!-- Terminal content will be dynamically updated -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="py-32 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center gap-4 mb-16">
+          <div class="h-px flex-1 bg-accent/30"></div>
+          <h2 class="text-3xl font-bold">Technology Arsenal</h2>
+          <div class="h-px flex-1 bg-accent/30"></div>
+        </div>
+
+        <div class="tech-architecture">
+          <!-- Frontend Layer -->
+          <div class="arch-layer" data-aos="fade-up">
+            <div class="layer-label">Client Layer</div>
+            <div class="arch-nodes">
+              <div class="arch-node">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                />
+                <div class="node-info">
+                  <span class="node-title">React</span>
+                  <span class="node-status">Production</span>
+                </div>
+                <div class="node-connections"></div>
+              </div>
+              <div class="arch-node">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                  alt="Vue"
+                />
+                <div class="node-info">
+                  <span class="node-title">Vue.js</span>
+                  <span class="node-status">Active</span>
+                </div>
+              </div>
+              <div class="arch-node">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                />
+                <div class="node-info">
+                  <span class="node-title">TypeScript</span>
+                  <span class="node-status">Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- API Gateway Layer -->
+          <div class="arch-layer" data-aos="fade-up" data-aos-delay="100">
+            <div class="layer-label">API Gateway</div>
+            <div class="arch-nodes">
+              <div class="arch-node gateway">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
+                  alt="Nginx"
+                />
+                <div class="node-info">
+                  <span class="node-title">Load Balancer</span>
+                  <span class="node-status">Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Services -->
+          <div class="arch-layer" data-aos="fade-up" data-aos-delay="200">
+            <div class="layer-label">Microservices</div>
+            <div class="arch-nodes">
+              <div class="arch-node service">
+                <img
+                  src="https://static.cdnlogo.com/logos/l/57/laravel.svg"
+                  alt="Laravel"
+                />
+                <div class="node-info">
+                  <span class="node-title">Laravel</span>
+                  <span class="node-status">Primary</span>
+                </div>
+              </div>
+              <div class="arch-node service">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                  alt="Spring"
+                />
+                <div class="node-info">
+                  <span class="node-title">Spring</span>
+                  <span class="node-status">Active</span>
+                </div>
+              </div>
+              <div class="arch-node service">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  alt="Python"
+                />
+                <div class="node-info">
+                  <span class="node-title">Python</span>
+                  <span class="node-status">ML/AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure Layer -->
+          <div class="arch-layer" data-aos="fade-up" data-aos-delay="300">
+            <div class="layer-label">Infrastructure</div>
+            <div class="arch-nodes">
+              <div class="arch-node infra">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                  alt="Docker"
+                />
+                <div class="node-info">
+                  <span class="node-title">Docker</span>
+                  <span class="node-status">Container</span>
+                </div>
+              </div>
+              <div class="arch-node infra">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                  alt="K8s"
+                />
+                <div class="node-info">
+                  <span class="node-title">K8s</span>
+                  <span class="node-status">Orchestration</span>
+                </div>
+              </div>
+              <div class="arch-node infra">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                  alt="AWS"
+                />
+                <div class="node-info">
+                  <span class="node-title">AWS</span>
+                  <span class="node-status">Cloud</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech logos section -->
+    <section
+      id="technologies"
+      class="py-20 relative overflow-hidden bg-surface"
+    >
+      <div class="tech-orbit-bg"></div>
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <h3 class="text-3xl font-bold text-center mb-4">
+          Technology Ecosystem
+        </h3>
+        <p class="text-center text-white/60 mb-16 max-w-2xl mx-auto">
+          Our comprehensive tech stack powers the future of e-commerce
+        </p>
+
+        <div class="tech-orbit-container">
+          <!-- Center Logo -->
+          <div class="center-logo">
+            <img src="fashol.svg" alt="Fashol" class="w-20 h-20" />
+          </div>
+
+          <!-- Orbiting Tech Circles -->
+          <div class="orbit orbit-1">
+            <div
+              class="tech-satellite"
+              style="--rotation: 0deg"
+              data-name="React"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 72deg"
+              data-name="Vue.js"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                alt="Vue"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 144deg"
+              data-name="TypeScript"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 216deg"
+              data-name="Next.js"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 288deg"
+              data-name="Tailwind"
+            >
+              <img
+                src="https://tailwindcss.com/favicons/favicon-32x32.png"
+                alt="Tailwind"
+              />
+            </div>
+          </div>
+
+          <div class="orbit orbit-2">
+            <div
+              class="tech-satellite"
+              style="--rotation: 0deg"
+              data-name="Laravel"
+            >
+              <img
+                src="https://static.cdnlogo.com/logos/l/57/laravel.svg"
+                alt="Laravel"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 60deg"
+              data-name="Spring"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                alt="Spring"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 120deg"
+              data-name="Python"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 180deg"
+              data-name="Go"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
+                alt="Go"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 240deg"
+              data-name="Node.js"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 300deg"
+              data-name="MongoDB"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB"
+              />
+            </div>
+          </div>
+
+          <div class="orbit orbit-3">
+            <div
+              class="tech-satellite"
+              style="--rotation: 0deg"
+              data-name="Docker"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                alt="Docker"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 51.4deg"
+              data-name="Kubernetes"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                alt="Kubernetes"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 102.8deg"
+              data-name="AWS"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                alt="AWS"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 154.2deg"
+              data-name="Redis"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                alt="Redis"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 205.6deg"
+              data-name="PostgreSQL"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 257deg"
+              data-name="Jenkins"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+                alt="Jenkins"
+              />
+            </div>
+            <div
+              class="tech-satellite"
+              style="--rotation: 308.4deg"
+              data-name="TensorFlow"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                alt="TensorFlow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section with modern design -->
+    <section id="team" class="py-32 relative bg-surface">
+      <div class="animated-texture"></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 class="text-3xl font-bold mb-16 text-center">
+          Tech Team Structure
+        </h2>
+
+        <div class="org-tree">
+          <!-- Team Lead Level -->
+          <div class="tree-level" data-aos="fade-down">
+            <div
+              class="team-member-card primary"
+              data-id="1"
+              data-name="John Doe"
+              data-role="Technical Team Lead"
+              data-expertise="System Architecture, Team Leadership, Technical Strategy"
+              data-projects="E-commerce Platform, Payment Gateway, Microservices Architecture"
+              data-stack="React, Node.js, Docker, AWS"
+              data-image="https://randomuser.me/api/portraits/men/1.jpg"
+            >
+              <div class="member-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/men/1.jpg"
+                  alt="Team Lead"
+                />
+                <div class="status-dot"></div>
+              </div>
+              <h3 class="text-xl font-bold">Team Lead</h3>
+              <p class="text-accent">Technical Team Lead</p>
+              <div class="mt-2 text-sm text-white/60">
+                Overseeing Technical Operations
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Team Level -->
+          <div class="tree-level" data-aos="fade-up" data-aos-delay="100">
+            <!-- Backend Team -->
+            <div
+              class="team-member-card"
+              data-id="2"
+              data-name="Alex Chen"
+              data-role="Senior Backend Developer"
+              data-expertise="Backend Architecture, Database Design, API Development"
+              data-projects="Order Management System, Inventory System, API Gateway"
+              data-stack="Laravel, Spring Boot, PostgreSQL, Redis"
+              data-image="https://randomuser.me/api/portraits/men/2.jpg"
+            >
+              <div class="member-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/men/2.jpg"
+                  alt="Backend Lead"
+                />
+                <div class="status-dot"></div>
+              </div>
+              <h3 class="font-bold">Senior Backend</h3>
+              <p class="text-sm text-white/60">System Architecture</p>
+            </div>
+            <div
+              class="team-member-card"
+              data-id="3"
+              data-name="Md Ishtiaque Ferdous"
+              data-role="Backend Developer"
+              data-expertise="API Development, Database Management, Server Administration"
+              data-projects="Authentication Service, Notification System"
+              data-stack="Python, Go, MongoDB, Docker"
+              data-image="/images/emon.jpg"
+            >
+              <div class="member-avatar">
+                <img src="/images/emon.jpg" alt="Backend Dev" class="" />
+                <div class="status-dot"></div>
+              </div>
+              <div class="member-name">Md Ishtiaque Ferdous</div>
+              <h3 class="font-bold">Backend Developer</h3>
+              <p class="text-sm text-white/60">API Development</p>
+            </div>
+          </div>
+
+          <!-- Frontend & App Team Level -->
+          <div class="tree-level" data-aos="fade-up" data-aos-delay="150">
+            <div class="sub-team-group">
+              <!-- Frontend Team -->
+              <div
+                class="team-member-card"
+                data-id="4"
+                data-name="Michael Zhang"
+                data-role="Senior Frontend Developer"
+                data-expertise="Frontend Architecture, Performance Optimization, UI/UX"
+                data-projects="Admin Dashboard, Customer Portal, Mobile Web"
+                data-stack="React, Vue.js, TypeScript, Next.js"
+                data-image="/images/emon.jpg"
+              >
+                <div class="member-avatar">
+                  <img src="/images/emon.jpg" alt="Frontend Lead" />
+                  <div class="status-dot"></div>
+                </div>
+                <h3 class="font-bold">Senior Frontend</h3>
+                <p class="text-sm text-white/60">UI Architecture</p>
+              </div>
+              <div
+                class="team-member-card"
+                data-id="5"
+                data-name="Emily Davis"
+                data-role="Frontend Developer"
+                data-expertise="Web Development, Responsive Design, Animation"
+                data-projects="Product Catalog, Shopping Cart, Checkout Flow"
+                data-stack="React, TailwindCSS, JavaScript"
+                data-image="https://randomuser.me/api/portraits/women/3.jpg"
+              >
+                <div class="member-avatar">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/3.jpg"
+                    alt="Frontend Dev"
+                  />
+                  <div class="status-dot"></div>
+                </div>
+                <h3 class="font-bold">Frontend Developer</h3>
+                <p class="text-sm text-white/60">Web Development</p>
+              </div>
+              <div
+                class="team-member-card"
+                data-id="6"
+                data-name="David Kim"
+                data-role="Frontend Developer"
+                data-expertise="UI Implementation, State Management, Testing"
+                data-projects="Search System, Filter System, Analytics Dashboard"
+                data-stack="Vue.js, Nuxt.js, Jest"
+                data-image="https://randomuser.me/api/portraits/men/4.jpg"
+              >
+                <div class="member-avatar">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/4.jpg"
+                    alt="Frontend Dev"
+                  />
+                  <div class="status-dot"></div>
+                </div>
+                <h3 class="font-bold">Frontend Developer</h3>
+                <p class="text-sm text-white/60">UI/UX Implementation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialized Roles Level -->
+          <div class="tree-level" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="team-member-card"
+              data-id="7"
+              data-name="Ryan Lee"
+              data-role="Mobile App Developer"
+              data-expertise="Mobile Development, Cross-platform, App Performance"
+              data-projects="Android App, iOS App, React Native Integration"
+              data-stack="React Native, Flutter, Firebase"
+              data-image="https://randomuser.me/api/portraits/men/5.jpg"
+            >
+              <div class="member-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/men/5.jpg"
+                  alt="App Developer"
+                />
+                <div class="status-dot"></div>
+              </div>
+              <h3 class="font-bold">App Developer</h3>
+              <p class="text-sm text-white/60">Mobile Development</p>
+            </div>
+            <div
+              class="team-member-card"
+              data-id="8"
+              data-name="Lisa Wang"
+              data-role="Data Scientist"
+              data-expertise="Machine Learning, Data Analysis, Predictive Modeling"
+              data-projects="Recommendation System, Sales Prediction, Customer Analytics"
+              data-stack="Python, TensorFlow, Pandas, Scikit-learn"
+              data-image="https://randomuser.me/api/portraits/women/5.jpg"
+            >
+              <div class="member-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/women/5.jpg"
+                  alt="Data Scientist"
+                />
+                <div class="status-dot"></div>
+              </div>
+              <h3 class="font-bold">Data Scientist</h3>
+              <p class="text-sm text-white/60">Data Analytics</p>
+            </div>
+            <div
+              class="team-member-card"
+              data-id="9"
+              data-name="James Wilson"
+              data-role="Project Manager"
+              data-expertise="Agile Management, Team Coordination, Resource Planning"
+              data-projects="Platform Migration, System Integration, Team Expansion"
+              data-stack="Jira, Confluence, GitHub, Slack"
+              data-image="https://randomuser.me/api/portraits/men/6.jpg"
+            >
+              <div class="member-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/men/6.jpg"
+                  alt="Project Manager"
+                />
+                <div class="status-dot"></div>
+              </div>
+              <h3 class="font-bold">Project Manager</h3>
+              <p class="text-sm text-white/60">Project Coordination</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 relative bg-dark overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="tech-sphere absolute top-20 right-20"></div>
+      <div class="tech-sphere absolute bottom-20 left-20"></div>
+      <div class="cyber-grid absolute inset-0 opacity-10"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex items-center gap-4 mb-16" data-aos="fade-down">
+          <div class="h-px flex-1 bg-accent/30"></div>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 bg-accent rotate-45"></div>
+            <h2 class="text-3xl font-bold">System.contact()</h2>
+            <div class="w-2 h-2 bg-accent rotate-45"></div>
+          </div>
+          <div class="h-px flex-1 bg-accent/30"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16">
+          <!-- Contact Info -->
+          <div class="space-y-8" data-aos="fade-right">
+            <div
+              class="terminal-style p-6 bg-surface border border-white/10 rounded-lg"
+            >
+              <div class="code-dots mb-4">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="space-y-4 font-mono">
+                <p class="text-accent">// Initialize contact protocols</p>
+                <p class="text-white/80">const contactMethods = {</p>
+                <p class="text-white/60 ml-4">email: "tech@fashol.com",</p>
+                <p class="text-white/60 ml-4">location: "Dhaka, Bangladesh",</p>
+                <p class="text-white/60 ml-4">response_time: "24h"</p>
+                <p class="text-white/80">}</p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div
+                class="flex items-center gap-4 p-4 bg-surface/50 border border-white/5 rounded-lg hover:border-accent/50 transition-colors"
+              >
+                <div
+                  class="w-12 h-12 rounded bg-accent/10 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-accent"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-accent">Email</h4>
+                  <p class="text-white/60 font-mono">tech@fashol.com</p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center gap-4 p-4 bg-surface/50 border border-white/5 rounded-lg hover:border-accent/50 transition-colors"
+              >
+                <div
+                  class="w-12 h-12 rounded bg-accent/10 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-accent"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-accent">Location</h4>
+                  <p class="text-white/60 font-mono">Dhaka, Bangladesh</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="relative" data-aos="fade-left">
+            <div
+              class="absolute inset-0 bg-accent/20 blur-3xl rounded-full"
+            ></div>
+            <div
+              class="bg-surface/95 backdrop-blur p-8 rounded-2xl border border-white/10 relative"
+            >
+              <div class="code-dots mb-6">
+                <span></span><span></span><span></span>
+              </div>
+              <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-medium mb-2 text-accent"
+                      >> name:</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-3 bg-dark/50 rounded-lg border border-white/10 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition font-mono"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium mb-2 text-accent"
+                      >> email:</label
+                    >
+                    <input
+                      type="email"
+                      class="w-full px-4 py-3 bg-dark/50 rounded-lg border border-white/10 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition font-mono"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium mb-2 text-accent"
+                    >> subject:</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 bg-dark/50 rounded-lg border border-white/10 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition font-mono"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium mb-2 text-accent"
+                    >> message:</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full px-4 py-3 bg-dark/50 rounded-lg border border-white/10 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition font-mono"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-accent hover:bg-accent/90 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2"
+                >
+                  <span class="font-mono">execute(sendMessage)</span>
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer starts -->
+    <footer class="bg-surface-light border-t border-white/5 pt-20 pb-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <!-- Company Info -->
+          <div class="col-span-2">
+            <div class="flex items-center gap-2 mb-6">
+              <img src="fashol.svg" alt="Fashol" class="h-8" />
+              <span class="text-xl font-bold">Tech Division</span>
+            </div>
+            <p class="text-white/60 mb-6 max-w-md">
+              Building innovative solutions for Bangladesh's leading e-commerce
+              platform. Join us in shaping the future of digital commerce.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-white/60 hover:text-accent transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76h-.03c-1.22 0-2-.83-2-1.87 0-1.06.8-1.87 2.05-1.87 1.24 0 2 .8 2.02 1.87 0 1.04-.78 1.87-2.05 1.87zM20.34 20.1h-3.63v-5.8c0-1.45-.52-2.45-1.83-2.45-1 0-1.6.67-1.87 1.32-.1.23-.11.55-.11.88v6.05H9.28s.05-9.82 0-10.84h3.63v1.54a3.6 3.6 0 0 1 3.26-1.8c2.39 0 4.18 1.56 4.18 4.89v6.21z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-white/60 hover:text-accent transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-4 text-white/60">
+              <li>
+                <a href="#" class="hover:text-accent transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-accent transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-accent transition-colors"
+                  >Tech Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-accent transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+            <ul class="space-y-4 text-white/60">
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                tech@fashol.com
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                Dhaka, Bangladesh
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="pt-8 border-t border-white/5 text-center text-white/40 text-sm"
+        >
+          © 2024 Fashol Tech Division. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

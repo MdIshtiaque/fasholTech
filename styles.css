@@ -1,0 +1,2024 @@
+/* Modern tech styling */
+:root {
+  --accent: #2B8C1A;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: white;
+}
+
+/* Matrix background effect */
+.matrix-bg {
+  background-image:
+    linear-gradient(rgba(43, 140, 26, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 140, 26, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Modern button styling */
+.tech-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(43, 140, 26, 0.3);
+}
+
+/* Stack card styling */
+.stack-card {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.stack-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(43, 140, 26, 0.1);
+}
+
+/* Team grid styling */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Glowing effects */
+.glow {
+  position: relative;
+}
+
+.glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Texture overlay */
+.texture-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232B8C1A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Modern nav link animation */
+.nav-link {
+  position: relative;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Tech logos grid */
+.tech-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.tech-logo {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.tech-logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--accent), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-logo:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: translateY(-5px) scale(1.05);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px -10px var(--accent);
+}
+
+.tech-logo:hover::before {
+  opacity: 0.1;
+}
+
+.tech-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.tech-logo:hover img {
+  transform: scale(1.1);
+}
+
+/* Enhanced Stack Card styling */
+.stack-card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.6), rgba(20, 20, 20, 0.8));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stack-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stack-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -20px var(--accent);
+}
+
+.stack-card:hover::before {
+  opacity: 0.1;
+}
+
+.tech-logos-row {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.tech-logos-row::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  opacity: 0.2;
+}
+
+.tech-logos-row:last-child::after {
+  display: none;
+}
+
+/* Add floating animation for tech logos */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.tech-logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+.tech-logo:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.tech-logo:nth-child(3n) {
+  animation-delay: 1s;
+}
+
+/* Enhanced button hover effect */
+.tech-button {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.tech-button:hover::before {
+  opacity: 1;
+}
+
+/* Add glowing dots in background */
+.glow-dots {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: pulse 2s infinite;
+}
+
+/* Add these new styles for the animated texture and org tree */
+
+/* Animated Texture */
+.animated-texture {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 49%, var(--accent) 49% 51%, transparent 51%) repeat;
+  background-size: 10px 10px;
+  opacity: 0.03;
+  animation: texture-scroll 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes texture-scroll {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Organization Tree Styles */
+.org-tree {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.tree-level {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.tree-level::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent));
+  opacity: 0.5;
+}
+
+.tree-level:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+}
+
+.team-member-card {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  width: 220px;
+  cursor: pointer;
+}
+
+.team-member-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(43, 140, 26, 0.2);
+}
+
+.team-member-card.primary {
+  background: linear-gradient(145deg, rgba(43, 140, 26, 0.2), rgba(26, 26, 26, 0.8));
+  border-color: var(--accent);
+  width: 260px;
+}
+
+.member-avatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  padding: 2px;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid #1A1A1A;
+  animation: pulse 2s infinite;
+}
+
+.sub-team {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.team-member-card.small {
+  padding: 1rem;
+  min-width: 150px;
+}
+
+.team-member-card.small .member-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .tree-level {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .tree-level::before {
+    width: 2px;
+  }
+
+  .tree-level:not(:last-child)::after {
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+  }
+}
+
+.sub-team-group {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Add these new styles for the tech logos section and footer */
+
+/* Tech Logos Container */
+.tech-logos-container {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.tech-logos-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tech-logos-row {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-logo {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-logo:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+}
+
+/* Enhanced Stack Card Styling */
+.stack-card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.6), rgba(20, 20, 20, 0.8));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.stack-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(43, 140, 26, 0.1);
+}
+
+/* Footer Styles */
+footer a:hover {
+  color: var(--accent);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* Add these responsive and tech-vibe enhancements */
+
+/* Cyberpunk-style grid overlay */
+.cyber-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(43, 140, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 140, 26, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Enhanced mobile navigation */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  padding: 6rem 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .tech-logos-row {
+    gap: 2rem;
+  }
+
+  .tech-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .team-member-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .tree-level {
+    padding: 1rem 0;
+  }
+
+  .sub-team-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .tech-stats {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+/* Enhanced tech vibes */
+.tech-glow {
+  position: relative;
+}
+
+.tech-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-glow:hover::before {
+  opacity: 1;
+}
+
+/* Matrix rain effect */
+.matrix-rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+/* Enhanced card animations */
+.stack-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.stack-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transition: 0.5s;
+}
+
+.stack-card:hover::after {
+  left: 100%;
+}
+
+/* Responsive team tree */
+@media (max-width: 1024px) {
+  .org-tree {
+    padding: 1rem;
+  }
+
+  .tree-level::before,
+  .tree-level::after {
+    display: none;
+  }
+
+  .team-member-card.primary {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Enhanced tech stack cards */
+@media (max-width: 640px) {
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-card {
+    margin: 0 auto;
+    max-width: 340px;
+  }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+  footer .grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer .col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+/* Add these new styles for the updated hero section */
+
+/* Tech Texture */
+.tech-texture {
+  background-image:
+    linear-gradient(to right, rgba(43, 140, 26, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 140, 26, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+}
+
+.cyber-dots {
+  background-image: radial-gradient(circle, var(--accent) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+}
+
+/* Circuit Pattern */
+.circuit-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%232B8C1A' stroke-width='1'%3E%3Cpath d='M40 0v20m0 40v20M0 40h20m40 0h20M15 15l10 10m30 30l10 10m0-50L55 25M25 55L15 65'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.floating-element {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  filter: blur(40px);
+  opacity: 0.1;
+  animation: float 10s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(100px, -50px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(200px, 50px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(100px, 100px) rotate(270deg);
+  }
+}
+
+/* Tech Badge */
+.tech-badge {
+  display: inline-block;
+  padding: 2px;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  border-radius: 9999px;
+}
+
+.tech-badge-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #141414;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: white;
+}
+
+/* Buttons */
+.tech-primary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-primary-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.tech-primary-button:hover::before {
+  transform: translateX(100%);
+}
+
+.tech-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-secondary-button:hover {
+  border-color: var(--accent);
+  background: rgba(43, 140, 26, 0.1);
+}
+
+/* Tech Metrics */
+.tech-metric {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tech-metric:hover {
+  background: rgba(43, 140, 26, 0.1);
+}
+
+/* Code Window */
+.code-window {
+  background: #1A1A1A;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transform: perspective(1000px) rotateY(-10deg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #141414;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.code-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.code-dots span:first-child {
+  background: #FF5F56;
+}
+
+.code-dots span:nth-child(2) {
+  background: #FFBD2E;
+}
+
+.code-dots span:nth-child(3) {
+  background: #27C93F;
+}
+
+.code-content {
+  padding: 1.5rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #A9B1D6;
+}
+
+/* Tech Sphere */
+.tech-sphere {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 30% 30%, var(--accent), transparent);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Replace the existing tech logo styles with these new styles */
+
+.tech-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.tech-category {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+}
+
+.category-label {
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.tech-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding-top: 1rem;
+}
+
+.tech-item {
+  width: 70px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.tech-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
+
+.tech-item span {
+  position: absolute;
+  bottom: -1.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition: all 0.3s ease;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  inset: -0.5rem;
+  border-radius: 12px;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.tech-item:hover {
+  transform: translateY(-0.5rem);
+}
+
+.tech-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+}
+
+.tech-item:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-item:hover::before {
+  opacity: 0.15;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-items-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tech-item {
+    width: 50px;
+  }
+
+  .category-label {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Add animation for initial load */
+.tech-category {
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.tech-category:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.tech-category:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.tech-category:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.tech-category:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Terminal Modal */
+.terminal-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.terminal-modal.active {
+  opacity: 1;
+}
+
+.terminal-window {
+  width: 90%;
+  max-width: 800px;
+  background: #1E1E1E;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  animation: slideIn 0.3s ease;
+}
+
+.terminal-modal.active .terminal-window {
+  transform: translateY(0);
+}
+
+.terminal-header {
+  background: #2D2D2D;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FF5F56;
+}
+
+.terminal-buttons span:nth-child(2) {
+  background: #FFBD2E;
+}
+
+.terminal-buttons span:nth-child(3) {
+  background: #27C93F;
+}
+
+.terminal-title {
+  color: #ABABAB;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+}
+
+.terminal-content {
+  padding: 1rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #A9B1D6;
+  min-height: 400px;
+  animation: fadeIn 0.3s ease;
+}
+
+.command-line {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.prompt {
+  color: var(--accent);
+}
+
+.command {
+  color: #E4E4E4;
+}
+
+.terminal-line {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Member Profile in Terminal */
+.member-profile {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.profile-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+}
+
+.profile-info h3 {
+  color: #E4E4E4;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-info .role {
+  color: var(--accent);
+}
+
+.profile-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.detail-item .label {
+  color: #888;
+  min-width: 100px;
+}
+
+.detail-item .value {
+  color: #E4E4E4;
+}
+
+/* Add loading animation for terminal */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-content .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--accent);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+/* Enhanced terminal styling */
+.terminal-window {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.terminal-line {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add these styles for the portfolio button */
+.profile-actions {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.view-portfolio-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px var(--accent);
+}
+
+.terminal-line {
+  font-family: 'Fira Code', monospace;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes terminalTyping {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.terminal-line::before {
+  content: '$';
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+/* Add these new styles for the orbital tech stack */
+.tech-orbit-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-orbit-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(43, 140, 26, 0.1) 0%, transparent 70%);
+}
+
+.center-logo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+.center-logo::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  opacity: 0.3;
+  filter: blur(10px);
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(43, 140, 26, 0.2);
+  border-radius: 50%;
+  animation: orbit-rotation linear infinite;
+}
+
+.orbit-1 {
+  width: 250px;
+  height: 250px;
+  animation-duration: 20s;
+}
+
+.orbit-2 {
+  width: 400px;
+  height: 400px;
+  animation-duration: 30s;
+}
+
+.orbit-3 {
+  width: 550px;
+  height: 550px;
+  animation-duration: 40s;
+}
+
+.tech-satellite {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-satellite img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+/* Position satellites along orbits */
+.tech-satellite {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(var(--rotation)) translateX(calc(50% + var(--orbit-radius))) rotate(calc(-1 * var(--rotation)));
+}
+
+.orbit-1 .tech-satellite {
+  --orbit-radius: 125px;
+}
+
+.orbit-2 .tech-satellite {
+  --orbit-radius: 200px;
+}
+
+.orbit-3 .tech-satellite {
+  --orbit-radius: 275px;
+}
+
+/* Update orbit animations */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(43, 140, 26, 0.2);
+  border-radius: 50%;
+  animation: orbit-rotation linear infinite;
+}
+
+.orbit:hover {
+  animation-play-state: paused;
+}
+
+.orbit-1 {
+  width: 250px;
+  height: 250px;
+  animation-duration: 30s;
+}
+
+.orbit-2 {
+  width: 400px;
+  height: 400px;
+  animation-duration: 40s;
+}
+
+.orbit-3 {
+  width: 550px;
+  height: 550px;
+  animation-duration: 50s;
+}
+
+@keyframes orbit-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .tech-orbit-container {
+    height: 500px;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-orbit-container {
+    height: 400px;
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-orbit-container {
+    height: 300px;
+    transform: scale(0.4);
+  }
+}
+
+/* Replace the tech flow styles with these */
+.tech-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-flow::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  opacity: 0.2;
+}
+
+.tech-cluster {
+  position: relative;
+  padding: 2rem;
+  background: rgba(26, 26, 26, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cluster-header {
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+.tech-item span {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-item:hover img {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-flow {
+    padding: 1rem;
+  }
+
+  .tech-cluster {
+    padding: 1.5rem 1rem;
+  }
+
+  .tech-items {
+    gap: 1rem;
+  }
+
+  .tech-item {
+    width: 50px;
+  }
+
+}
+
+/* Add these new styles for the tech architecture diagram */
+.tech-architecture {
+  position: relative;
+  padding: 2rem;
+  background: rgba(26, 26, 26, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-architecture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%232B8C1A' stroke-width='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.1;
+  border-radius: 16px;
+}
+
+.arch-layer {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+}
+
+.arch-layer::after {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2rem;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.layer-label {
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  z-index: 1;
+}
+
+.arch-nodes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.arch-node {
+  position: relative;
+  width: 100px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.arch-node img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+.node-info {
+  text-align: center;
+}
+
+.node-title {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.node-status {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* Node type-specific styles */
+.arch-node.gateway {
+  background: linear-gradient(145deg, rgba(43, 140, 26, 0.1), transparent);
+  border-color: var(--accent);
+}
+
+.arch-node.service {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.arch-node.infra {
+  background: rgba(26, 26, 26, 0.8);
+}
+
+/* Connection lines */
+.arch-nodes::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  opacity: 0.2;
+}
+
+/* Pulse animation for active nodes */
+.arch-node::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.arch-node:hover::after {
+  opacity: 0.2;
+}
+
+.arch-node:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .arch-nodes {
+    gap: 1rem;
+  }
+
+  .arch-node {
+    width: 80px;
+    padding: 0.75rem;
+  }
+
+  .arch-node img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Add these styles for the updated hero section */
+.tech-badge {
+  @apply inline-flex p-[1px] bg-gradient-to-r from-accent to-accent/20 rounded-full;
+}
+
+.tech-badge-inner {
+  @apply flex items-center gap-2 px-4 py-1 bg-surface rounded-full text-sm;
+}
+
+.tech-stat {
+  @apply bg-surface p-4 rounded-xl border border-white/5 transition-all relative overflow-hidden;
+}
+
+.tech-stat:hover {
+  @apply border-accent/50 -translate-y-1;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-accent mb-1;
+}
+
+.stat-label {
+  @apply text-sm text-white/60;
+}
+
+.stat-icon {
+  @apply absolute top-3 right-3 opacity-20 text-xl;
+}
+
+.code-terminal {
+  @apply bg-surface rounded-xl overflow-hidden border border-white/10;
+  transform: perspective(1000px) rotateY(-5deg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+  @apply bg-surface-light p-3 flex items-center gap-4 border-b border-white/5;
+}
+
+.terminal-dots {
+  @apply flex gap-2;
+}
+
+.terminal-dots span {
+  @apply w-3 h-3 rounded-full;
+}
+
+.terminal-dots span:nth-child(1) {
+  @apply bg-red-500;
+}
+
+.terminal-dots span:nth-child(2) {
+  @apply bg-yellow-500;
+}
+
+.terminal-dots span:nth-child(3) {
+  @apply bg-green-500;
+}
+
+.terminal-body {
+  @apply p-6 font-mono text-sm text-white/80 leading-relaxed;
+}
+
+.tech-sphere {
+  @apply absolute -top-20 -right-20 w-80 h-80 rounded-full;
+  background: radial-gradient(circle at 30% 30%, var(--accent), transparent);
+  filter: blur(80px);
+  opacity: 0.1;
+  animation: pulseSphere 4s ease-in-out infinite;
+}
+
+@keyframes pulseSphere {
+
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.15;
+  }
+}
+
+.circuit-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%232B8C1A' stroke-width='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Add these new styles for the enhanced hero section */
+
+/* Tech Grid Background */
+.tech-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(43, 140, 26, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 140, 26, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: top;
+  opacity: 0.2;
+}
+
+.tech-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(43, 140, 26, 0.15), transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+/* Data Streams */
+.data-streams {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.data-stream {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: dataFlow 2s linear infinite;
+}
+
+/* Terminal Badge */
+.terminal-badge {
+  background: rgba(43, 140, 26, 0.1);
+  border: 1px solid rgba(43, 140, 26, 0.3);
+  border-radius: 8px;
+  padding: 1px;
+}
+
+.terminal-badge-inner {
+  background: rgba(26, 26, 26, 0.95);
+  padding: 0.75rem 1.25rem;
+  border-radius: 7px;
+  font-family: 'Fira Code', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminal-prompt {
+  color: var(--accent);
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--accent);
+  animation: blink 1s infinite;
+}
+
+/* System Metrics */
+.system-metrics {
+  display: grid;
+  gap: 1rem;
+  background: rgba(26, 26, 26, 0.6);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric {
+  space-y: 0.5rem;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.metric-value {
+  font-family: 'Fira Code', monospace;
+  color: var(--accent);
+}
+
+.metric-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metric-progress {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+/* Live Terminal */
+.live-terminal {
+  background: rgba(26, 26, 26, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dots span:nth-child(1) {
+  background: #FF5F56;
+}
+
+.terminal-dots span:nth-child(2) {
+  background: #FFBD2E;
+}
+
+.terminal-dots span:nth-child(3) {
+  background: #27C93F;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #A9B1D6;
+  height: 300px;
+  overflow-y: auto;
+}
+
+/* Animations */
+@keyframes dataFlow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
