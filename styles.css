@@ -1422,8 +1422,11 @@ footer a:hover {
   animation: orbit-rotation linear infinite;
 }
 
-.orbit:hover {
-  animation-play-state: paused;
+.orbit-reverse-1 {
+  position: absolute;
+  border: 1px solid rgba(43, 140, 26, 0.2);
+  border-radius: 50%;
+  animation: orbit-rotation-reverse linear infinite;
 }
 
 .orbit-1 {
@@ -1435,13 +1438,13 @@ footer a:hover {
 .orbit-2 {
   width: 400px;
   height: 400px;
-  animation-duration: 40s;
+  animation-duration: 60s;
 }
 
 .orbit-3 {
   width: 550px;
   height: 550px;
-  animation-duration: 50s;
+  animation-duration: 90s;
 }
 
 @keyframes orbit-rotation {
@@ -1453,6 +1456,18 @@ footer a:hover {
     transform: rotate(360deg);
   }
 }
+
+
+@keyframes orbit-rotation-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
@@ -1855,9 +1870,9 @@ footer a:hover {
 
 .data-stream {
   position: absolute;
-  width: 2px;
+  /* width: 2px; */
   background: linear-gradient(to bottom, var(--accent), transparent);
-  animation: dataFlow 2s linear infinite;
+  /* animation: dataFlow 2s linear infinite; */
 }
 
 /* Terminal Badge */
