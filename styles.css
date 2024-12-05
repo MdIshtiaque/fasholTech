@@ -1391,7 +1391,7 @@ footer a:hover {
 .tech-satellite img {
   width: 30px;
   height: 30px;
-  filter: grayscale(100%) brightness(0.8);
+  /* filter: grayscale(100%) brightness(0.8); */
   transition: all 0.3s ease;
 }
 
